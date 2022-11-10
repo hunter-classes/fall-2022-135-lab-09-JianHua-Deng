@@ -19,6 +19,10 @@ Coord3D pointP = {10, 20, 30};
 Coord3D pointQ = {-20, 21, -22};
 
 CHECK(fartherFromOrigin(&pointP, &pointQ) == &pointP);
+
+Coord3D pointP2 = {90, 65, 12};
+Coord3D pointQ2 = {200, 362, 566};
+CHECK(fartherFromOrigin(&pointP2, &pointQ2) == &pointQ2);
 }//end test cases for task B
 
 TEST_CASE("Task C"){
