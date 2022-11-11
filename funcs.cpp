@@ -38,4 +38,14 @@ void deleteCoord3D(Coord3D *p){
     delete p;
 }//end deleteCoord3D function
 
+bool compare(Coord3D *p1, Coord3D *p2){
+
+if((*p1).x == (*p2).x && (*p1).y == (*p2).y && (*p1).z == (*p2).z){
+    return true;
+}else{
+    return false;
+}//end else condition
+
+}//end compare function
+
 

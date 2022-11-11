@@ -38,10 +38,13 @@ CHECK(pos.z == 100.4);
 TEST_CASE("Task E"){
 //Creating coord3d object
 Coord3D *object = createCoord3D(14, 20, 1002);
+Coord3D *delobject = createCoord3D(14, 20, 1002);
 CHECK((*object).x == 14);
 CHECK((*object).y == 20);
 CHECK((*object).z == 1002);
+CHECK(compare(object, delobject));
 
-//Not sure how to check the deleteCoord3D function yet
 deleteCoord3D(object);
+CHECK(!compare(object, delobject));
+
 }//end test cases for task E creating coord3d object
